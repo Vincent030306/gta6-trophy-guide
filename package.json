@@ -1,0 +1,14 @@
+{
+  "name": "leonida-deduction-board",
+  "private": true,
+  "type": "module",
+  "description": "GTA VI trophy guide and tracker entry for make.fun's gta6-trophy-guide-01",
+  "license": "MIT",
+  "scripts": {
+    "data": "node gen.mjs",
+    "build": "node main.ts"
+  },
+  "engines": {
+    "node": ">=22.18.0"
+  }
+}

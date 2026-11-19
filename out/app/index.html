@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en" data-view="guide" data-spoiler="on">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Deduction Board - GTA VI trophy guide &amp; tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <span class="mark" aria-hidden="true">◆</span>
+    <div>
+      <h1>Leonida Deduction Board</h1>
+      <p class="sub">Every one of the 55 GTA VI trophies: what to do, where, and when it can slip away.</p>
+    </div>
+  </div>
+  <div class="meter" role="status" aria-live="polite">
+    <div class="ring" id="ring"><span id="pct">0%</span></div>
+    <div class="meter-text">
+      <strong id="count">0 of 55 earned</strong>
+      <span id="platinumState">Platinum locked</span>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs" role="tablist" aria-label="Views">
+  <button role="tab" id="tab-guide" aria-selected="true" aria-controls="view-guide">Guide &amp; checklist</button>
+  <button role="tab" id="tab-road" aria-selected="false" aria-controls="view-road">Road to platinum</button>
+  <button role="tab" id="tab-flags" aria-selected="false" aria-controls="view-flags">Missables &amp; notes</button>
+</nav>
+
+<main>
+<section id="view-guide" role="tabpanel" aria-labelledby="tab-guide">
+  <div class="bar">
+    <label class="field">
+      <span>Search</span>
+      <input id="search" type="search" placeholder="name, mission, description">
+    </label>
+    <label class="field">
+      <span>Grade</span>
+      <select id="grade">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+    </label>
+    <label class="field">
+      <span>Kind</span>
+      <select id="kind">
+        <option value="all">All kinds</option>
+        <option value="story">Story &amp; missions</option>
+        <option value="completion">100% / collection</option>
+        <option value="freeform">Freeform &amp; activities</option>
+        <option value="hidden">Unclear (hidden hint)</option>
+      </select>
+    </label>
+    <label class="field">
+      <span>Status</span>
+      <select id="status">
+        <option value="all">All</option>
+        <option value="todo">Not earned</option>
+        <option value="done">Earned</option>
+        <option value="missable">Missable only</option>
+      </select>
+    </label>
+    <label class="toggle">
+      <input id="spoiler" type="checkbox" checked>
+      <span>Spoiler setting: hide story trophies until earned</span>
+    </label>
+  </div>
+
+  <div class="tablewrap">
+    <table id="rows">
+      <thead>
+        <tr><th scope="col" class="c-done">Earned</th><th scope="col">Trophy</th><th scope="col" class="c-grade">Grade</th><th scope="col">Guide</th><th scope="col" class="c-miss">Missable</th></tr>
+      </thead>
+      <tbody id="body"></tbody>
+    </table>
+    <p id="empty" class="empty" hidden>Nothing matches these filters.</p>
+  </div>
+</section>
+
+<section id="view-road" role="tabpanel" aria-labelledby="tab-road" hidden>
+  <p class="lede">The platinum sits at the bottom of the pile: it unlocks itself once the other 54 are earned. This is one order that keeps the risky trophies ahead of the milestones that can strand them.</p>
+  <ol id="road"></ol>
+</section>
+
+<section id="view-flags" role="tabpanel" aria-labelledby="tab-flags" hidden>
+  <p class="lede">Trophies whose official description points at one window: a single use of an ability, a chain of robberies that must not break, an undetected route, or a second attempt.</p>
+  <ul id="flags" class="flags"></ul>
+</section>
+</main>
+
+<footer class="tools">
+  <div>
+    <button id="export">Export progress</button>
+    <label class="filebtn">Import progress<input id="import" type="file" accept="application/json,.json"></label>
+    <button id="reset" class="quiet">Clear</button>
+  </div>
+  <p id="saved" class="saved" role="status" aria-live="polite">Saved in this browser.</p>
+  <p class="sources">Trophy names, descriptions and grades: the official PlayStation 5 list. Guides written for this app from those descriptions and the game's structure; each row names the official description it reads.</p>
+</footer>
+<script src="data/data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
